@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=false;">
     <style type="text/css">
+    @font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Press Start 2P'), local('PressStart2P-Regular'), url(font.woff) format('woff');
+}
     *,html,body{font-family: 'Press Start 2P', cursive;}
 
     #tb1{
@@ -36,7 +42,6 @@ user-select: none;
     }
 
     </style>
-<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
     <script>
        preventDefaultScroll = function(event) {
         // Prevent scrolling on this element
@@ -273,7 +278,7 @@ var game={
       txt6:'That white square is you! Neat right?',
       txt7:'You are trying to avoid being selected by the Almighty Evil. Select a space wisely.',
       txt8:'What have you done!? You released the Almighty Evil!!!',
-      txt9:'Quick, vanquish the evil by selecting or hovering over the dark spaces before them become solid!',
+      txt9:'Quick, vanquish the evil by selecting or hovering over the dark spaces before they become solid!',
       txt10:'Whew, everythings back to normal! Your score:<span id="score"></span>. Hit arrow to restart life sequence',
       txt11:'',
     },
@@ -443,7 +448,7 @@ var game={
          highlightSelected = false;
          //nxtTxt();
          highlight = false;
-         if(currLvlNm<7){game.infectionSpeed+=.01;}
+         if(currLvlNm<8){game.infectionSpeed+=.01;}
          changeBG();
         }
 
