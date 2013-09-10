@@ -172,6 +172,70 @@ var game={
             obj8:{x:-1,y:-1,opacity:0,locked:false,dead:false},
         },
       },
+       level7:{
+       colorStyle:'255,0,255',
+        objects:{
+          init:false,
+            infection:8,
+            saved:false,            
+            obj1:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj2:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj3:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj4:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj5:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj6:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj7:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj8:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+        },
+      },
+       level8:{
+         colorStyle:'0,0,255',
+        objects:{
+          init:false,
+            infection:8,
+            saved:false,            
+            obj1:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj2:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj3:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj4:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj5:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj6:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj7:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj8:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+        },
+      },
+       level9:{
+        colorStyle:'0,255,255',
+        objects:{
+          init:false,
+            infection:8,
+            saved:false,            
+            obj1:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj2:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj3:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj4:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj5:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj6:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj7:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj8:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+        },
+      },
+       level10:{
+        colorStyle:'255,125,0',
+        objects:{
+          init:false,
+            infection:8,
+            saved:false,            
+            obj1:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj2:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj3:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj4:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj5:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj6:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj7:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+            obj8:{x:-1,y:-1,opacity:0,locked:false,dead:false},
+        },
+      },
     },
 
     hud:{
@@ -314,7 +378,7 @@ var game={
     }
     function changeBG(){
       if(!continuousBG&&!transition){
-        if(currLvlNm==6){$('tb1').style.zIndex =10;nxtTxt(10); currLvlNm=1;prevLvlNm=6}else{prevLvlNm = currLvlNm;currLvlNm++}
+        if(currLvlNm==10){$('tb1').style.zIndex =10;nxtTxt(10); currLvlNm=1;prevLvlNm=10}else{prevLvlNm = currLvlNm;currLvlNm++}
       }
       else{setTimeout('changeBG()',1000);return}
       
@@ -379,7 +443,7 @@ var game={
          highlightSelected = false;
          //nxtTxt();
          highlight = false;
-         game.infectionSpeed+=.01;
+         if(currLvlNm<7){game.infectionSpeed+=.01;}
          changeBG();
         }
 
