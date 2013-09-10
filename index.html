@@ -499,7 +499,7 @@ var game={
             if( game['levels']['level'+currLvlNm]['objects']['obj'+i]['opacity']<=.5&&!game['levels']['level'+currLvlNm]['objects']['obj'+i]['locked']){ 
               game['levels']['level'+currLvlNm]['objects']['obj'+i]['saved']=true;
              // console.log(game['levels']['level'+currLvlNm]['objects']['obj'+i]['opacity']);
-             mySource.connect(myAudioContext.destination); 
+             //mySource.connect(myAudioContext.destination); 
              game['levels']['level'+currLvlNm]['objects']['obj'+i]['locked']=true; game.score++;game.infectedResolved++
            }
             
